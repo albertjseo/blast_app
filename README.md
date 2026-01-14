@@ -50,7 +50,7 @@ blast-app/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/albertjseo/blast-app.git
+git clone https://github.com/albertjseo/blast_app.git
 cd blast_app
 ```
 ### 2. Create and Activate a Virtual Environment
