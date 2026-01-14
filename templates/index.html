@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}BLAST Search{% endblock %}
+
+{% block content %}
+
+<!-- Heading -->
+<h2 class="mb-4">Enter Your FASTA Sequence</h2>
+
+<!-- Support both text input and file upload -->
+<form method="POST" enctype="multipart/form-data">
+
+    <div class="row g-4 align-items-stretch">
+
+        <!-- Text Input -->
+        <div class="col-md-5 d-flex">
+            <div class="card shadow-sm h-100 w-100">
+                <div class="card-header" style="background-color: #4B2E83;">
+                    <h5 class="text-white mb-0">Paste FASTA Text</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <p class="text-muted">Paste your FASTA sequence directly into the box below.</p>
+                    <textarea name="sequence" rows="10" class="form-control mt-auto"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+            <h3 class="fw-bold text-muted">OR</h3>
+        </div>
+
+        <!-- File Upload -->
+        <div class="col-md-5 d-flex">
+            <div class="card shadow-sm h-100 w-100">
+                <div class="card-header" style="background-color: #4B2E83;">
+                    <h5 class="text-white mb-0">Upload FASTA File</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <p class="text-muted">Choose a .fasta or .fa file from your computer.</p>
+                    <input type="file" name="fasta_file" class="form-control mt-auto">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn mt-4 text-white" style="background-color: #4B2E83; border: none;">Run BLAST</button>
+
+</form>
+
+{% endblock %}

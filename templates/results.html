@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}BLAST Results{% endblock %}
+
+{% block content %}
+
+<!-- Heading -->
+<h2 class="mb-4">BLAST Results</h2>
+
+<!-- Button to return to the input page -->
+<a href="{{ url_for('index') }}" class="btn text-white mt-3" style="background-color: #4B2E83; border: none;">Run another BLAST search</a>
+
+<!-- Results table -->
+<table class="table table-striped table-bordered">
+
+    <!-- Table header -->
+    <thead class="text-white" style="background-color: #4B2E83;">
+        <tr>
+            <th>Hit Title</th>
+            <th>Accession</th>
+            <th>Percent Identity</th>
+            <th>Alignment Length</th>
+            <th>E-value</th>
+        </tr>
+    </thead>
+
+    <!-- Table body populated from BLAST hits -->
+    <tbody>
+        {% for hit in hits %}
+        <tr>
+
+            <!-- BLAST alignment metadata -->
+            <td>{{ hit.title }}</td>
+            <td>{{ hit.accession }}</td>
+            <td>{{ hit.percent_identity }}</td>
+            <td>{{ hit.alignment_length }}</td>
+            <td>{{ hit.evalue }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
