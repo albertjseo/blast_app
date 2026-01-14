@@ -32,7 +32,7 @@ blast-app/
 ├── README.md                # Project documentation
 ├── requirements.txt         # Python dependencies
 ├── .env                     # Environment variables (optional)
-├── gitignore                # Notes / ignore file
+├── .gitignore               # Git ignore rules
 │
 ├── templates/
 │   ├── base.html            # Shared layout
@@ -43,7 +43,10 @@ blast-app/
 │   ├── NC_003909.8.fasta
 │   └── NC_009085.1.fasta
 │
+├── test_validate.py         # Pytest for FASTA validation
+│
 └── venv/                    # Virtual environment (not included in repo)
+
 ```
 ---
 ## Running the App Locally
@@ -74,6 +77,14 @@ python app.py
 
 ### 6. Input your Sequence Text / FASTA file and "Run BLAST"
 
+---
+
+## Unit Testing
+### Run the Pytest from Project Root
+**Assuming that the virtual environment is active and all requirements have been installed**
+```bash
+pytest
+```
 
 ---
 ## Assumptions Made:
