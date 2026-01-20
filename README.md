@@ -1,4 +1,4 @@
-# BLAST Web App
+ # BLAST Web App
 A Flask application for validating FASTA sequences and directly running NCBI BLAST searches within a browser.
 
  <img src="https://img.shields.io/badge/Language-Python-blue.svg" style="zoom:100%;" /> <img src="https://img.shields.io/badge/Language-HTML-orange.svg" style="zoom:100%;" /> <img src="https://img.shields.io/badge/Skill-Jinja-red.svg" style="zoom:100%;" /> <img src="https://img.shields.io/badge/Skill-Flask-purple.svg" style="zoom:100%;" />
